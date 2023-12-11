@@ -4,7 +4,7 @@ import Footer from './components/Footer.tsx'
 import Header from './components/Header.tsx'
 import Main from './components/Main.tsx'
 import Rooms from './components/Rooms.tsx'
-import Cafe from './components/cafe.tsx'
+import Cafe from './components/Cafe.tsx'
 
 function App() {
 	return (
