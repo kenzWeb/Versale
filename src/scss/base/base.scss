@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'config';
+@import 'fonts';
+@import 'reset';
+@import 'swiper';
+
+@import '../block/header.scss';
+@import '../block/home.scss';
+@import '../block/about.scss';
+@import '../block/rooms.scss';
+@import '../block/cafe.scss';
+@import '../block/contact.scss';
+@import '../block/footer.scss';
+@import 'media';
+
+[class*='__container'] {
+	max-width: 1480px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+body {
+	color: $white;
+	font-family: Playfair Display;
+	font-weight: 700;
+	color: black;
+}

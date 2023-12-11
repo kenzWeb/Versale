@@ -1,0 +1,22 @@
+.cafe {
+	background: $black;
+	color: white;
+	margin-top: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
+	padding-top: 120px;
+	padding-bottom: 200px;
+
+	&__title {
+		color: $white;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		color: $white;
+		font-family: Montserrat;
+		font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
+		font-weight: 400;
+		line-height: 140%;
+		width: clamp(18.75rem, 11.732rem + 35.09vw, 43.75rem);
+		margin-bottom: 100px;
+	}
+}

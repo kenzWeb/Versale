@@ -1,0 +1,75 @@
+// Colors
+
+// State Color
+
+$black: #000000;
+$white: #fff;
+$primary: #620318;
+$gray: #2a2626;
+
+// Mixin
+
+@mixin zindex {
+	position: relative;
+	z-index: 99;
+}
+
+@mixin flex($justify, $center, $center1) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $center;
+	text-align: $center1;
+}
+
+@mixin absolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+// Class
+
+.btn_prime {
+	background: $primary;
+	padding: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem)
+		clamp(0.563rem, 0.405rem + 0.79vw, 1.125rem);
+	color: $white;
+	font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
+	border-radius: 30px;
+	font-family: Montserrat;
+	font-weight: 400;
+	line-height: 15px;
+	transition: 0.2s all ease-in-out;
+	border: 1.5px solid $primary;
+	@include flex(center, center, center);
+
+	&:hover {
+		color: $primary;
+		background: $white;
+	}
+}
+
+.btn_second {
+	background: transparent;
+	padding: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem)
+		clamp(0.563rem, 0.405rem + 0.79vw, 1.125rem);
+	color: $primary;
+	font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
+	border-radius: 30px;
+	font-family: Montserrat;
+	font-weight: 400;
+	border: 1.5px solid $primary;
+	line-height: 15px;
+	transition: 0.2s all ease-in-out;
+	@include flex(center, center, center);
+
+	&:hover {
+		color: $white;
+		background: $primary;
+	}
+}
+
+.title {
+	font-size: clamp(1.875rem, 1.349rem + 2.63vw, 3.75rem);
+	line-height: 140%;
+}

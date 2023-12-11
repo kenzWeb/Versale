@@ -1,0 +1,57 @@
+.swiper-pagination {
+	transform: translate(-42%, -60%);
+}
+
+.swiper-pagination-bullet {
+	width: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem);
+	height: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem);
+	opacity: 1;
+	border: 1.5px solid $white;
+	background: $white;
+}
+
+.swiper-pagination-bullet-active {
+	background: transparent;
+}
+
+.about-pagination {
+	margin-top: 20px;
+
+	span {
+		width: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem);
+		height: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem);
+		background-color: $black;
+		border: 1.5px solid $black;
+
+		&.swiper-pagination-bullet-active {
+			background-color: transparent;
+		}
+	}
+	&.rooms {
+		padding-left: 80px;
+	}
+
+	&.white span {
+		background-color: $white;
+		border: 1.5px solid $white;
+	}
+
+	&.white .swiper-pagination-bullet-active {
+		background-color: transparent;
+	}
+}
+
+.prev {
+	left: 2%;
+}
+.next {
+	right: 2%;
+	transform: rotate(180deg);
+}
+
+.swiper-nav {
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+}
