@@ -71,5 +71,5 @@ $gray: #2a2626;
 
 .title {
 	font-size: clamp(1.875rem, 1.349rem + 2.63vw, 3.75rem);
-	line-height: 140%;
+	line-height: clamp(3.75rem, 2.697rem + 5.26vw, 7.5rem);
 }

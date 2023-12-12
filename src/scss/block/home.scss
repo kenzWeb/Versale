@@ -1,7 +1,7 @@
 .home {
 	&__content {
 		position: absolute;
-		bottom: 35%;
+		bottom: 20%;
 		left: 5%;
 	}
 
@@ -13,7 +13,6 @@
 	&__title {
 		color: $white;
 		font-size: clamp(2.813rem, 1.935rem + 4.39vw, 5.938rem);
-		line-height: clamp(3.75rem, 2.645rem + 5.53vw, 7.688rem);
 		z-index: -5;
 	}
 

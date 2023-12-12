@@ -11,7 +11,7 @@ export default function Cafe() {
 			<div className='about__container'>
 				<div className='about__wrapper'>
 					<div className='about__left'>
-						<h2 className='cafe__title title text-[#fff]'>О нас</h2>
+						<h2 className='cafe__title title text-[#fff]'>Кафе</h2>
 						<h3 className='cafe__subtitle '>
 							Мы предлагаем уютное проживание и первоклассное обслуживание в
 							самом сердце прекрасного города Белогорск. Наша гостиница идеально

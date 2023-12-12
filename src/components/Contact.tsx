@@ -18,7 +18,7 @@ export default function Contact() {
 				</div>
 				<div className='contact__right'>
 					<a href='/'>
-						<img src='img/map/1.svg' alt='' />
+						<img className='contact__img' src='img/map/1.svg' alt='' />
 					</a>
 				</div>
 			</div>

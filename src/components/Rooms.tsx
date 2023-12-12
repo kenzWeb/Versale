@@ -21,11 +21,11 @@ export default function Rooms() {
 				</div>
 				<Swiper
 					slidesPerView={1}
-					spaceBetween={50}
+					spaceBetween={150}
 					navigation={navigation}
 					pagination={pagination}
 					modules={[Pagination, Navigation]}
-					className='rooms__content'
+					className='rooms__content relative'
 				>
 					<SwiperSlide className='rooms__swiper-slide'>
 						<div className='rooms__left'>
@@ -91,7 +91,7 @@ export default function Rooms() {
 					<div className='prev swiper-nav'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							width='58'
+							width='46'
 							height='12'
 							viewBox='0 0 58 12'
 							fill='none'
@@ -105,7 +105,7 @@ export default function Rooms() {
 					<div className='next swiper-nav'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
-							width='58'
+							width='46'
 							height='12'
 							viewBox='0 0 58 12'
 							fill='none'
