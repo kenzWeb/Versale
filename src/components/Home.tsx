@@ -29,6 +29,10 @@ const Home: React.FC<HomeProps> = ({slidesData}) => {
 					</SwiperSlide>
 				))}
 				<div className='home__wrapper'></div>
+
+				<div className='swiper__container'>
+					<div className='swiper-pagination'></div>
+				</div>
 			</Swiper>
 		</section>
 	)

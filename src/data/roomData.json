@@ -1,0 +1,56 @@
+[
+	{
+		"title": "Президентский люкс",
+		"subtitle": "subtitle",
+		"price": "4500 руб/сутки",
+		"img": "img/bedroom/1.jpg"
+	},
+	{
+		"title": "Люкс",
+		"subtitle": "subtitle",
+		"price": "4200 руб/сутки",
+		"img": "img/bedroom/2.jpg"
+	},
+	{
+		"title": "Полулюкс",
+		"subtitle": "subtitle",
+		"price": "3800 руб/сутки",
+		"img": "img/bedroom/3.jpg"
+	},
+	{
+		"title": "Четырехместный номер",
+		"subtitle": "subtitle",
+		"price": "3600 руб/сутки",
+		"img": "img/bedroom/4.jpg"
+	},
+	{
+		"title": "Трехместный номер",
+		"subtitle": "subtitle",
+		"price": "3000 руб/сутки",
+		"img": "img/bedroom/1.jpg"
+	},
+	{
+		"title": "Комфорт +",
+		"subtitle": "subtitle",
+		"price": "2800 руб/сутки",
+		"img": "img/bedroom/2.jpg"
+	},
+	{
+		"title": "Двухместный номер",
+		"subtitle": "subtitle",
+		"price": "2600 руб/сутки",
+		"img": "img/bedroom/3.jpg"
+	},
+	{
+		"title": "Одноместный номер",
+		"subtitle": "subtitle",
+		"price": "2300 руб/сутки",
+		"img": "img/bedroom/4.jpg"
+	},
+	{
+		"title": "Эконом",
+		"subtitle": "subtitle",
+		"price": "1600 руб/сутки",
+		"img": "img/bedroom/1.jpg"
+	}
+]

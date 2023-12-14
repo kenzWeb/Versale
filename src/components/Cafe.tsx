@@ -18,6 +18,11 @@ export default function Cafe() {
 							подходит как для отдыха, так и для деловых поездок, и мы гордимся
 							предоставлением высококачественного сервиса для всех наших гостей.
 						</h3>
+						<div className='cafe__description'>
+							<li>Завтрак - 350 рублей </li>
+							<li>Обед - 300 рублей </li>
+							<li>Ужин - 390 рублей</li>
+						</div>
 						<div className='about__buttons'>
 							<button className='btn_prime'>Меню</button>
 						</div>
