@@ -9,11 +9,14 @@ export default function Contact() {
 						данные:
 					</h3>
 					<h3 className='contact__subtitle'>
-						Адрес: ул. Центральная, 15, Белогорск
+						Адрес: Амурская обл., г. Белогорск, ул. 1-ая Вокзальная 13
 					</h3>
-					<h3 className='contact__subtitle'>Телефон: +7 (XXX) XXX-XXXX</h3>
+					<h3 className='contact__subtitle'>Телефон: +7 (914) 040-40-15</h3>
 					<h3 className='contact__subtitle'>
-						Электронная почта: info@versale-hotel.com
+						Электронная почта: <span>info@versale-hotel.com</span>
+					</h3>
+					<h3 className='contact__subtitle'>
+						Электронная почта бухгалтерии: ooo_magnolia_bel@mail.ru
 					</h3>
 				</div>
 				<div className='contact__right'>

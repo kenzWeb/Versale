@@ -1,40 +1,19 @@
-import 'swiper/css'
-import 'swiper/css/effect-fade'
-import 'swiper/css/pagination'
-import {EffectFade, Pagination} from 'swiper/modules'
-import {Swiper, SwiperSlide} from 'swiper/react'
-import SliderImg from './miniApps/SliderImg'
-
-interface HomeProps {
-	slidesData: {id: number; content: React.ReactNode}[]
-}
-
-const Home: React.FC<HomeProps> = ({slidesData}) => {
-	const pagination = {
-		clickable: true,
-	}
-
+const Home = () => {
 	return (
-		<section className='home relative'>
-			<Swiper
-				pagination={pagination}
-				effect={'fade'}
-				modules={[Pagination, EffectFade]}
-				className='mySwiper relative'
-			>
-				{slidesData.map((slide) => (
-					<SwiperSlide key={slide.id} className='home__slide'>
-						<SliderImg id={slide.id} />
-						{slide.content}
-					</SwiperSlide>
-				))}
-				<div className='home__wrapper'></div>
-
-				<div className='swiper__container'>
-					<div className='swiper-pagination'></div>
+		<main className='relative'>
+			<section className='home'>
+				{/* <div className="home__bg"></div> */}
+				<div className='home__container'>
+					<h2 className='home__title'>
+						Ваш комфорт - <br /> наша забота{' '}
+					</h2>
+					<h3 className='home__subtitle'>
+						Мы стремимся создать незабываемые впечатления и обеспечить вас всем
+						необходимым для полного расслабления и уюта.
+					</h3>
 				</div>
-			</Swiper>
-		</section>
+			</section>
+		</main>
 	)
 }
 

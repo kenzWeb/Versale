@@ -5,6 +5,6 @@
 	justify-content: center;
 	background-color: $black;
 	&__logo {
-		max-width: 200px;
+		max-width: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
 	}
 }

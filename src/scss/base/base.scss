@@ -5,15 +5,15 @@
 @import 'config';
 @import 'fonts';
 @import 'reset';
-@import 'swiper';
 
 @import '../block/header.scss';
 @import '../block/home.scss';
 @import '../block/about.scss';
-@import '../block/rooms.scss';
 @import '../block/cafe.scss';
 @import '../block/contact.scss';
 @import '../block/footer.scss';
+@import '../block/rooms.scss';
+@import 'swiper';
 @import 'media';
 
 [class*='__container'] {
