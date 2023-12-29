@@ -1,9 +1,14 @@
 .swiper-pagination-bullet {
-	width: 20px;
-	height: 20px;
+	width: 15px;
+	height: 15px;
 	opacity: 1;
 	border: 1.5px solid $white;
 	background: $white;
+	transition: all 0.1s ease-in-out;
+
+	&:hover {
+		scale: 1.1;
+	}
 }
 
 .swiper-pagination-bullet-active {
@@ -14,8 +19,8 @@
 	margin-top: 20px;
 
 	span {
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 		background-color: $black;
 		border: 1.5px solid $black;
 

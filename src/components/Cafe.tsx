@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import {EffectFade, Pagination} from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
 
@@ -9,7 +10,13 @@ export default function Cafe() {
 	return (
 		<section className='cafe'>
 			<div className='about__container'>
-				<div className='about__wrapper'>
+				<motion.div
+					initial={{y: -100, opacity: 0}}
+					whileInView={{y: 0, opacity: 1}}
+					transition={{duration: 0.3, delay: 0.4}}
+					viewport={{ once: true }}
+					className='about__wrapper'
+				>
 					<div className='about__left'>
 						<h2 className='cafe__title title text-[#fff]'>Кафе</h2>
 						<h3 className='cafe__subtitle '>
@@ -49,7 +56,7 @@ export default function Cafe() {
 							<div className='about-pagination white'></div>
 						</Swiper>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)

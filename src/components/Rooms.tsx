@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import {EffectFade, Navigation, Pagination} from 'swiper/modules'
@@ -17,7 +18,13 @@ export const Rooms = () => {
 
 	return (
 		<section className='rooms'>
-			<div className='rooms__container'>
+			<motion.div
+				initial={{y: -100, opacity: 0}}
+				whileInView={{y: 0, opacity: 1}}
+				transition={{duration: 0.3, delay: 0.4}}
+				viewport={{ once: true }}
+				className='rooms__container'
+			>
 				<div className='rooms__header'>
 					<h2 className='rooms__hedaer-title title'>Номера</h2>
 				</div>
@@ -65,7 +72,7 @@ export const Rooms = () => {
 							</div>
 						</SwiperSlide>
 					))}
-					<div className='prev swiper-nav'>
+					<motion.div whileHover={{opacity: 0.6}} className='prev swiper-nav'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							width='46'
@@ -78,8 +85,8 @@ export const Rooms = () => {
 								fill='#620318'
 							/>
 						</svg>
-					</div>
-					<div className='next swiper-nav'>
+					</motion.div>
+					<motion.div whileHover={{opacity: 0.6}} className='next swiper-nav'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							width='46'
@@ -92,10 +99,10 @@ export const Rooms = () => {
 								fill='#620318'
 							/>
 						</svg>
-					</div>
+					</motion.div>
 					<div className='next'></div>
 				</Swiper>
-			</div>
+			</motion.div>
 		</section>
 	)
 }

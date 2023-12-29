@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
@@ -14,7 +15,13 @@ export default function About() {
 	return (
 		<section className='about'>
 			<div className='about__container'>
-				<div className='about__wrapper'>
+				<motion.div
+					initial={{y: -100, opacity: 0}}
+					whileInView={{y: 0, opacity: 1}}
+					transition={{duration: 0.3, delay: 0.4}}
+					viewport={{ once: true }}
+					className='about__wrapper'
+				>
 					<div className='about__left'>
 						<h2 className='about__title title'>О нас</h2>
 						<h3 className='about__subtitle'>
@@ -50,7 +57,7 @@ export default function About() {
 							<div className='about-pagination'></div>
 						</Swiper>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)
