@@ -13,10 +13,9 @@ export default function Cafe() {
 					<div className='about__left'>
 						<h2 className='cafe__title title text-[#fff]'>Кафе</h2>
 						<h3 className='cafe__subtitle '>
-							Мы предлагаем уютное проживание и первоклассное обслуживание в
-							самом сердце прекрасного города Белогорск. Наша гостиница идеально
-							подходит как для отдыха, так и для деловых поездок, и мы гордимся
-							предоставлением высококачественного сервиса для всех наших гостей.
+							Откройте для себя вкус наших блюд в уютном кафе "Versale". Наша
+							кухня славится свежими ингредиентами и разнообразием блюд, чтобы
+							удовлетворить самый изысканный вкус.
 						</h3>
 						<div className='cafe__description'>
 							<li>Завтрак - 350 рублей </li>
@@ -36,16 +35,16 @@ export default function Cafe() {
 							className='mySwiper'
 						>
 							<SwiperSlide className='about__swiper-slide'>
-								<img className='about__img' src='img/about/1.jpg' alt='' />
+								<img className='about__img' src='img/cafe/1.jpg' alt='' />
 							</SwiperSlide>
 							<SwiperSlide className='about__swiper-slide'>
-								<img className='about__img' src='img/about/2.jpg' alt='' />
+								<img className='about__img' src='img/cafe/2.jpg' alt='' />
 							</SwiperSlide>
 							<SwiperSlide className='about__swiper-slide'>
-								<img className='about__img' src='img/about/3.jpg' alt='' />
+								<img className='about__img' src='img/cafe/3.jpg' alt='' />
 							</SwiperSlide>
 							<SwiperSlide className='about__swiper-slide'>
-								<img className='about__img' src='img/about/4.jpg' alt='' />
+								<img className='about__img' src='img/cafe/4.jpg' alt='' />
 							</SwiperSlide>
 							<div className='about-pagination white'></div>
 						</Swiper>

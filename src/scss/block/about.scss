@@ -1,6 +1,6 @@
 .about {
-	margin-top: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
-	margin-bottom: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
+	margin-top: 200px;
+	margin-bottom: 215px;
 
 	&__wrapper {
 		display: flex;
@@ -11,6 +11,7 @@
 	&__left {
 		display: flex;
 		flex-direction: column;
+		margin-right: 30px;
 	}
 
 	&__title {
@@ -21,9 +22,9 @@
 	&__subtitle {
 		color: $black;
 		font-family: Montserrat;
-		font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
+		font-size: clamp(0.75rem, 0.5rem + 1.25vw, 1.5rem);
 		font-weight: 400;
-		width: clamp(18.75rem, 11.031rem + 38.6vw, 46.25rem);
+		max-width: 740px;
 		line-height: 140%;
 		margin-bottom: clamp(1.75rem, 1.259rem + 2.46vw, 3.5rem);
 	}
@@ -34,15 +35,14 @@
 	}
 
 	&__right {
-		width: 30%;
+		// width: clamp(15rem, 10rem + 25vw, 30rem);
+		width: 40%;
 	}
 
 	&__img {
-		width: 600px;
-		height: clamp(18.75rem, 13.487rem + 26.32vw, 37.5rem);
+		height: 600px;
 		border-radius: 20px;
 		object-fit: cover;
-		
 	}
 }
 .about__swiper-slide {

@@ -31,16 +31,16 @@ $gray: #2a2626;
 
 .btn_prime {
 	background: $primary;
-	padding: clamp(0.438rem, 0.297rem + 0.7vw, 0.938rem)
-		clamp(0.563rem, 0.405rem + 0.79vw, 1.125rem);
+	padding: clamp(0.438rem, 0.292rem + 0.73vw, 0.875rem)
+		clamp(1.688rem, 1.104rem + 2.92vw, 3.438rem);
 	color: $white;
 	font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
-	border-radius: 30px;
+	border-radius: 50px;
 	font-family: Montserrat;
 	font-weight: 400;
-	line-height: 15px;
+	line-height: 140%;
 	transition: 0.2s all ease-in-out;
-	border: 1.5px solid $primary;
+	border: 3px solid $primary;
 	@include flex(center, center, center);
 
 	&:hover {
@@ -55,10 +55,10 @@ $gray: #2a2626;
 		clamp(0.563rem, 0.405rem + 0.79vw, 1.125rem);
 	color: $primary;
 	font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1.5rem);
-	border-radius: 30px;
+	border-radius: 50px;
 	font-family: Montserrat;
 	font-weight: 400;
-	border: 1.5px solid $primary;
+	border: 3px solid $primary;
 	line-height: 15px;
 	transition: 0.2s all ease-in-out;
 	@include flex(center, center, center);
@@ -70,6 +70,6 @@ $gray: #2a2626;
 }
 
 .title {
-	font-size: clamp(1.875rem, 1.349rem + 2.63vw, 3.75rem);
-	line-height: clamp(3.75rem, 2.697rem + 5.26vw, 7.5rem);
+	font-size: clamp(1.875rem, 1.25rem + 3.13vw, 3.75rem);
+	line-height: 140%;
 }

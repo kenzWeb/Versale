@@ -1,5 +1,6 @@
 import 'swiper/css'
-import 'swiper/css/effect-cube'
+import 'swiper/css/effect-fade'
+import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import {EffectFade, Pagination} from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
@@ -33,7 +34,6 @@ export default function About() {
 							pagination={pagination}
 							effect='fade'
 							modules={[Pagination, EffectFade]}
-							className='mySwiper'
 						>
 							<SwiperSlide className='about__swiper-slide'>
 								<img className='about__img' src='img/about/1.jpg' alt='' />
