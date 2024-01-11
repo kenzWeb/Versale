@@ -12,9 +12,7 @@
   "dependencies": {
     "@2gis/mapgl": "^1.42.0",
     "2gis-maps": "^3.7.3",
-    "chokidar": "^3.5.3",
     "framer-motion": "^10.16.16",
-    "fsevents": "^2.3.3",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
