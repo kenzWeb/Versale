@@ -1,5 +1,6 @@
 /* eslint-disable prefer-const */
-import * as DG from '2gis-maps'
+import DG from '2gis-maps'
+
 
 import {useEffect} from 'react'
 
