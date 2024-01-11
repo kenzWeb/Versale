@@ -60,15 +60,9 @@ export const Rooms = () => {
 								<h2 className='rooms__title'>{item.title}</h2>
 								<h3 className='rooms__subtitle'>{item.subtitle}</h3>
 								<div className='rooms__socials'>
-									<img src='img/icons/rooms/1.svg' alt='' />
-									<img src='img/icons/rooms/2.svg' alt='' />
-									<img src='img/icons/rooms/3.svg' alt='' />
-									<img src='img/icons/rooms/4.svg' alt='' />
-									<img src='img/icons/rooms/5.svg' alt='' />
-									<img src='img/icons/rooms/6.svg' alt='' />
-									<img src='img/icons/rooms/7.svg' alt='' />
+									<img src='img/icons/rooms/icons.svg' alt='' />
+								<h4 className='rooms__price'>От {item.price}</h4>
 								</div>
-								<h4 className='rooms__price'>Цена: {item.price}</h4>
 							</div>
 						</SwiperSlide>
 					))}

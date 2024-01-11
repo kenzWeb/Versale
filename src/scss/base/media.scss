@@ -22,13 +22,11 @@
 		}
 
 		&__socials {
-			margin-bottom: 15px;
 			margin-bottom: clamp(0.938rem, 0.674rem + 1.32vw, 1.875rem);
-			gap: 20px;
 
 			img {
-				width: 15px;
-				height: 15px;
+				width: 100px;
+				height: 20px;
 			}
 		}
 
@@ -131,6 +129,10 @@
 
 		&__left {
 			margin-bottom: 50px;
+			margin-right: 0;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
 		}
 
 		&__right {
@@ -193,15 +195,9 @@
 		&__socials {
 			display: flex;
 			align-items: center;
-			gap: clamp(1.375rem, 0.978rem + 1.98vw, 2.813rem);
-			margin-bottom: clamp(0.938rem, 0.674rem + 1.32vw, 1.875rem);
-			margin-right: auto;
-			margin-left: auto;
 			text-align: center;
 
 			img {
-				width: clamp(0.938rem, 0.674rem + 1.32vw, 1.875rem);
-				height: clamp(0.938rem, 0.674rem + 1.32vw, 1.875rem);
 			}
 		}
 
@@ -211,7 +207,6 @@
 			font-size: clamp(1rem, 0.724rem + 1.38vw, 2rem);
 			font-weight: 400;
 			text-align: center;
-			margin-bottom: 20px;
 		}
 	}
 }
@@ -284,7 +279,6 @@
 
 		&__right {
 			text-align: left;
-
 		}
 
 		&__left {
@@ -306,6 +300,12 @@
 	.rooms {
 		&__socials {
 			display: none;
+		}
+	}
+
+	.contact {
+		&__left {
+			align-items: start;
 		}
 	}
 }

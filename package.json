@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@2gis/mapgl": "^1.42.0",
+    "2gis-maps": "^3.7.3",
+    "chokidar": "^3.5.3",
     "framer-motion": "^10.16.16",
+    "fsevents": "^2.3.3",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "scss": "^0.2.4",
+    "source-map-resolve": "^0.6.0",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

@@ -27,10 +27,12 @@
 		max-width: 740px;
 		line-height: 140%;
 		margin-bottom: clamp(1.75rem, 1.259rem + 2.46vw, 3.5rem);
+		text-align: justify;
 	}
 
 	&__buttons {
 		display: flex;
+		height: 30px;
 		gap: 20px;
 	}
 

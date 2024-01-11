@@ -9,6 +9,7 @@ import {Rooms} from './components/Rooms.tsx'
 function App() {
 	return (
 		<>
+
 			<Header />
 			<main>
 				<Home />

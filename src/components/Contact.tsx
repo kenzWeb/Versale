@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import {motion} from 'framer-motion'
+import {Map} from './Map/Map'
 
 export default function Contact() {
 	return (
@@ -7,7 +8,7 @@ export default function Contact() {
 				initial={{y: -100, opacity: 0}}
 				whileInView={{y: 0, opacity: 1}}
 				transition={{duration: 0.3, delay: 0.4}}
-				viewport={{ once: true }}
+				viewport={{once: true}}
 				className='contact__container'
 			>
 				<div className='contact__left'>
@@ -28,9 +29,7 @@ export default function Contact() {
 					</h3>
 				</div>
 				<div className='contact__right'>
-					<a href='/'>
-						<img className='contact__img' src='img/map/1.svg' alt='' />
-					</a>
+					<Map />
 				</div>
 			</motion.div>
 		</section>

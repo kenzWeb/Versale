@@ -28,3 +28,9 @@ body {
 	font-weight: 700;
 	color: black;
 }
+
+#map-container {
+	width: clamp(16.875rem, 11.042rem + 29.17vw, 34.375rem);
+	height: clamp(12.5rem, 8.333rem + 20.83vw, 25rem);
+	border-radius: 20px;
+}
