@@ -27,7 +27,7 @@
 		text-align: justify;
 
 		&:not(:last-child) {
-			margin-bottom: 20px;
+			margin-bottom: clamp(0.625rem, 0.417rem + 1.04vw, 1.25rem);
 		}
 
 		span {

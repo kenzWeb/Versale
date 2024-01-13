@@ -53,3 +53,9 @@
 	top: 50%;
 	cursor: pointer;
 }
+
+.gallery__slider-slide.swiper-slide-thumb-active {
+	img {
+		border: 3px solid #620318;
+	}
+}

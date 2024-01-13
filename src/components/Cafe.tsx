@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import {EffectFade, Pagination} from 'swiper/modules'
+import {motion} from 'framer-motion'
+import {Autoplay, EffectFade, Pagination} from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
 
 export default function Cafe() {
@@ -14,7 +14,7 @@ export default function Cafe() {
 					initial={{y: -100, opacity: 0}}
 					whileInView={{y: 0, opacity: 1}}
 					transition={{duration: 0.3, delay: 0.4}}
-					viewport={{ once: true }}
+					viewport={{once: true}}
 					className='about__wrapper'
 				>
 					<div className='about__left'>
@@ -38,7 +38,11 @@ export default function Cafe() {
 							slidesPerView={1}
 							pagination={pagination}
 							effect='fade'
-							modules={[Pagination, EffectFade]}
+							autoplay={{
+								delay: 5000,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay, Pagination, EffectFade]}
 							className='mySwiper'
 						>
 							<SwiperSlide className='about__swiper-slide'>

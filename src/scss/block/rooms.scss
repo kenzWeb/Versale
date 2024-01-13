@@ -1,4 +1,5 @@
 .rooms {
+	position: relative;
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -47,6 +48,7 @@
 
 	&__content-img {
 		border-radius: 30px;
+		cursor: pointer;
 		width: clamp(12.5rem, 7.292rem + 26.04vw, 28.125rem);
 		height: 500px;
 		object-fit: cover;
@@ -54,6 +56,7 @@
 
 	&__content-right {
 		display: flex;
+		justify-content: space-between;
 		flex-direction: column;
 	}
 
@@ -81,10 +84,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-top: 30%;
 		margin-bottom: clamp(0.938rem, 0.674rem + 1.32vw, 1.875rem);
 
-		img {
+		&-social {
+			display: flex;
+			align-items: center;
+			gap: clamp(0.938rem, 0.625rem + 1.56vw, 1.875rem);
 
+			img {
+				width: clamp(0.938rem, 0.625rem + 1.56vw, 1.875rem);
+				height: clamp(0.938rem, 0.625rem + 1.56vw, 1.875rem);
+			}
 		}
 	}
 
@@ -93,5 +104,34 @@
 		font-family: Montserrat;
 		font-size: clamp(1rem, 0.724rem + 1.38vw, 2rem);
 		font-weight: 400;
+	}
+
+	&-pagination {
+		z-index: 10000;
+	}
+
+	&__icon {
+		position: relative;
+		&-title {
+			cursor: default;
+			font-family: Montserrat;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 12px;
+			opacity: 0;
+			white-space: nowrap;
+			transform: translateY(-400%);
+			background-color: #fff;
+			padding: 5px;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			font-weight: 400;
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		&-img {
+			cursor: pointer;
+		}
 	}
 }

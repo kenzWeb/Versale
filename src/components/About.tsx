@@ -3,7 +3,7 @@ import 'swiper/css'
 import 'swiper/css/effect-fade'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import {EffectFade, Pagination} from 'swiper/modules'
+import {Autoplay, EffectFade, Pagination} from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
 					initial={{y: -100, opacity: 0}}
 					whileInView={{y: 0, opacity: 1}}
 					transition={{duration: 0.3, delay: 0.4}}
-					viewport={{ once: true }}
+					viewport={{once: true}}
 					className='about__wrapper'
 				>
 					<div className='about__left'>
@@ -40,7 +40,11 @@ export default function About() {
 							slidesPerView={1}
 							pagination={pagination}
 							effect='fade'
-							modules={[Pagination, EffectFade]}
+							autoplay={{
+								delay: 5000,
+								disableOnInteraction: false,
+							}}
+							modules={[Autoplay, Pagination, EffectFade]}
 						>
 							<SwiperSlide className='about__swiper-slide'>
 								<img className='about__img' src='img/about/1.jpg' alt='' />

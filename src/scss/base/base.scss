@@ -13,6 +13,7 @@
 @import '../block/contact.scss';
 @import '../block/footer.scss';
 @import '../block/rooms.scss';
+@import '../block/gallery.scss';
 @import 'swiper';
 @import 'media';
 
@@ -29,7 +30,7 @@ body {
 	color: black;
 }
 
-#map-container {
+#map-container{
 	width: clamp(16.875rem, 11.042rem + 29.17vw, 34.375rem);
 	height: clamp(12.5rem, 8.333rem + 20.83vw, 25rem);
 	border-radius: 20px;
