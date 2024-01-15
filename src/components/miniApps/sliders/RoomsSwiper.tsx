@@ -49,14 +49,18 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 
 		if (iconImgs.length > 0) {
 			iconImgs.forEach((iconImg, index) => {
-				iconImg.addEventListener('mouseenter', handleMouseOver(index))
+				const eventName = window.innerWidth < 790 ? 'touchend' : 'mouseenter'
+
+				iconImg.addEventListener(eventName, handleMouseOver(index))
 				iconImg.addEventListener('mouseleave', handleMouseOut(index))
 			})
 		}
 
 		return () => {
 			iconImgs.forEach((iconImg, index) => {
-				iconImg.removeEventListener('mouseover', handleMouseOver(index))
+				const eventName = window.innerWidth < 790 ? 'touchend' : 'mouseenter'
+
+				iconImg.removeEventListener(eventName, handleMouseOver(index))
 				iconImg.removeEventListener('mouseout', handleMouseOut(index))
 			})
 		}
