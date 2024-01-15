@@ -135,4 +135,8 @@
 			cursor: pointer;
 		}
 	}
+
+	.rooms__i:hover .rooms__icon-title {
+		opacity: 1;
+	}
 }
