@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import {Autoplay, EffectFade, Navigation, Pagination} from 'swiper/modules'
@@ -22,6 +22,10 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 	onRoomsImgChange,
 	setGalleryOpen,
 }) => {
+	const [selectedIconIndex, setSelectedIconIndex] = useState<number | null>(
+		null,
+	)
+
 	const roomsGalleryButton = (item: RoomItem) => {
 		onRoomsImgChange(item.img)
 		setGalleryOpen(true)
@@ -33,14 +37,26 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 				index
 			] as HTMLElement
 
+			// Hide the previous icon-title if it exists
+			if (selectedIconIndex !== null) {
+				const prevIconTitle = document.querySelectorAll('.rooms__icon-title')[
+					selectedIconIndex
+				] as HTMLElement
+				prevIconTitle.classList.add('hiddens')
+			}
+
 			iconTitle.classList.remove('hiddens')
+			setSelectedIconIndex(index)
 		}
 
-		const handleMouseOut = (index: number) => () => {
-			const iconTitle = document.querySelectorAll('.rooms__icon-title')[
-				index
-			] as HTMLElement
-			iconTitle.classList.add('hiddens')
+		const handleMouseOut = () => {
+			// Hide the current icon-title when mouse out
+			if (selectedIconIndex !== null) {
+				const iconTitle = document.querySelectorAll('.rooms__icon-title')[
+					selectedIconIndex
+				] as HTMLElement
+				iconTitle.classList.add('hiddens')
+			}
 		}
 
 		const iconImgs = document.querySelectorAll('.rooms__icon-img')
@@ -48,23 +64,23 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 		if (iconImgs.length > 0) {
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.addEventListener('mouseover', handleMouseOver(index))
-				iconImg.addEventListener('mouseout', handleMouseOut(index))
+				iconImg.addEventListener('mouseout', handleMouseOut)
 
 				iconImg.addEventListener('click', handleMouseOver(index))
-				iconImg.addEventListener('touchend', handleMouseOut(index))
+				iconImg.addEventListener('touchend', handleMouseOut)
 			})
 		}
 
 		return () => {
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.removeEventListener('mouseover', handleMouseOver(index))
-				iconImg.removeEventListener('mouseout', handleMouseOut(index))
+				iconImg.removeEventListener('mouseout', handleMouseOut)
 
 				iconImg.addEventListener('click', handleMouseOver(index))
-				iconImg.addEventListener('touchend', handleMouseOut(index))
+				iconImg.addEventListener('touchend', handleMouseOut)
 			})
 		}
-	}, [])
+	}, [selectedIconIndex])
 
 	return (
 		<Swiper
