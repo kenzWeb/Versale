@@ -28,6 +28,8 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 	}
 
 	useEffect(() => {
+		let activeIndex = -1
+
 		const handleMouseOver = (index: number) => () => {
 			const iconTitle = document.querySelectorAll('.rooms__icon-title')[
 				index
@@ -42,25 +44,60 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 				index
 			] as HTMLElement
 
-			iconTitle.style.opacity = '0'
+			if (index !== activeIndex) {
+				iconTitle.style.opacity = '0'
+			}
+		}
+
+		const handleClick = (index: number) => () => {
+			const iconImgs = document.querySelectorAll('.rooms__icon-img')
+			const iconTitle = document.querySelectorAll('.rooms__icon-title')[
+				index
+			] as HTMLElement
+
+			if (index === activeIndex) {
+				iconTitle.style.opacity = '0'
+				activeIndex = -1
+			} else {
+				iconImgs.forEach((_iconImg, i) => {
+					const title = document.querySelectorAll('.rooms__icon-title')[
+						i
+					] as HTMLElement
+
+					if (i === index) {
+						title.style.opacity = '1'
+					} else {
+						title.style.opacity = '0'
+					}
+				})
+
+				activeIndex = index
+			}
 		}
 
 		const iconImgs = document.querySelectorAll('.rooms__icon-img')
 
-		if (iconImgs.length > 0) {
-			iconImgs.forEach((iconImg, index) => {
-				iconImg.addEventListener('mouseover', handleMouseOver(index))
-				iconImg.addEventListener('click', handleMouseOver(index))
-				iconImg.addEventListener('mouseout', handleMouseOut(index))
-			})
+		const handleWindowResize = () => {
+			if (window.innerWidth === 790) {
+				iconImgs.forEach((iconImg, index) => {
+					iconImg.addEventListener('mouseover', handleMouseOver(index))
+					iconImg.addEventListener('click', handleClick(index))
+					iconImg.addEventListener('mouseout', handleMouseOut(index))
+				})
+			} else {
+				iconImgs.forEach((iconImg, index) => {
+					iconImg.addEventListener('mouseover', handleMouseOver(index))
+					iconImg.addEventListener('mouseout', handleMouseOut(index))
+				})
+			}
 		}
 
+		handleWindowResize()
+
+		window.addEventListener('resize', handleWindowResize)
+
 		return () => {
-			iconImgs.forEach((iconImg, index) => {
-				iconImg.removeEventListener('mouseover', handleMouseOver(index))
-				iconImg.addEventListener('click', handleMouseOver(index))
-				iconImg.removeEventListener('mouseout', handleMouseOut(index))
-			})
+			window.removeEventListener('resize', handleWindowResize)
 		}
 	}, [])
 
