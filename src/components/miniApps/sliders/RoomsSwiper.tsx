@@ -59,6 +59,9 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.removeEventListener('mouseover', handleMouseOver(index))
 				iconImg.removeEventListener('mouseout', handleMouseOut(index))
+
+				iconImg.addEventListener('click', handleMouseOver(index))
+				iconImg.addEventListener('touchend', handleMouseOut(index))
 			})
 		}
 	}, [])
