@@ -50,6 +50,7 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 		if (iconImgs.length > 0) {
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.addEventListener('mouseover', handleMouseOver(index))
+				iconImg.addEventListener('click', handleMouseOver(index))
 				iconImg.addEventListener('mouseout', handleMouseOut(index))
 			})
 		}
@@ -57,11 +58,12 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 		return () => {
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.removeEventListener('mouseover', handleMouseOver(index))
+				iconImg.addEventListener('click', handleMouseOver(index))
 				iconImg.removeEventListener('mouseout', handleMouseOut(index))
 			})
 		}
 	}, [])
-	
+
 	return (
 		<Swiper
 			slidesPerView={1}
