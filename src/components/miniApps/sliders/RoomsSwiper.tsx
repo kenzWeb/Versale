@@ -61,6 +61,7 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 			})
 		}
 	}, [])
+	
 	return (
 		<Swiper
 			slidesPerView={1}

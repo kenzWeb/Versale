@@ -341,7 +341,11 @@
 
 	.rooms {
 		&__socials {
-			display: none;
+			flex-direction: column;
+
+			&-social {
+				margin-bottom: 20px;
+			}
 		}
 
 		&-pagination {
