@@ -33,26 +33,24 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 				index
 			] as HTMLElement
 
-			iconTitle.style.opacity = '1'
-			iconTitle.style.transition = 'all 0.3s ease-in-out'
+			iconTitle.classList.remove('hiddens')
 		}
 
 		const handleMouseOut = (index: number) => () => {
 			const iconTitle = document.querySelectorAll('.rooms__icon-title')[
 				index
 			] as HTMLElement
-
-			iconTitle.style.opacity = '0'
+			iconTitle.classList.add('hiddens')
 		}
 
-		const iconImgs = document.querySelectorAll('.rooms_i')
+		const iconImgs = document.querySelectorAll('.rooms__icon-img')
 
 		if (iconImgs.length > 0) {
 			iconImgs.forEach((iconImg, index) => {
-				iconImg.addEventListener('mouseenter', handleMouseOver(index))
-				iconImg.addEventListener('mouseleave', handleMouseOut(index))
+				iconImg.addEventListener('mouseover', handleMouseOver(index))
+				iconImg.addEventListener('mouseout', handleMouseOut(index))
 
-				iconImg.addEventListener('touchstart', handleMouseOver(index))
+				iconImg.addEventListener('click', handleMouseOver(index))
 				iconImg.addEventListener('touchend', handleMouseOut(index))
 			})
 		}
@@ -61,9 +59,6 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 			iconImgs.forEach((iconImg, index) => {
 				iconImg.removeEventListener('mouseover', handleMouseOver(index))
 				iconImg.removeEventListener('mouseout', handleMouseOut(index))
-
-				iconImg.addEventListener('touchstart', handleMouseOver(index))
-				iconImg.addEventListener('touchend', handleMouseOut(index))
 			})
 		}
 	}, [])
@@ -115,60 +110,52 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 							<div className='rooms__socials-social'>
 								{index === 2 ? (
 									<div className='rooms__icon'>
-										<h2 className='rooms__icon-title'>
+										<h2 className='rooms__icon-title hiddens'>
 											2 односпальных кровати
 										</h2>
-										<div className='rooms_i'>
-											<img
-												className='rooms__icon-img'
-												src='img/icons/rooms/5.svg'
-												alt='roomsIcons'
-											/>
-										</div>
+										<img
+											className='rooms__icon-img'
+											src='img/icons/rooms/5.svg'
+											alt='roomsIcons'
+										/>
 									</div>
 								) : (
 									<div className='rooms__icon'>
-										<h2 className='rooms__icon-title'>1 двуспальная кровать</h2>
-										<div className='rooms_i'>
-											<img
-												className='rooms__icon-img'
-												src='img/icons/rooms/1.svg'
-												alt='roomsIcons'
-											/>
-										</div>
+										<h2 className='rooms__icon-title hiddens'>
+											1 двуспальная кровать
+										</h2>
+										<img
+											className='rooms__icon-img'
+											src='img/icons/rooms/1.svg'
+											alt='roomsIcons'
+										/>
 									</div>
 								)}
 								<div className='rooms__icon'>
-									<h2 className='rooms__icon-title'>до 2-х человек</h2>
-									<div className='rooms_i'>
-										<img
-											className='rooms__icon-img'
-											src='img/icons/rooms/2.svg'
-											alt='roomsIcons'
-										/>
-									</div>
+									<h2 className='rooms__icon-title hiddens'>до 2-х человек</h2>
+									<img
+										className='rooms__icon-img'
+										src='img/icons/rooms/2.svg'
+										alt='roomsIcons'
+									/>
 								</div>
 								<div className='rooms__icon'>
-									<h2 className='rooms__icon-title'>
+									<h2 className='rooms__icon-title hiddens'>
 										Туалетные принадлежности - полотенце
 									</h2>
-									<div className='rooms_i'>
-										<img
-											className='rooms__icon-img'
-											src='img/icons/rooms/4.svg'
-											alt='roomsIcons'
-										/>
-									</div>
+									<img
+										className='rooms__icon-img'
+										src='img/icons/rooms/4.svg'
+										alt='roomsIcons'
+									/>
 								</div>
 								<div className='rooms__icon'>
-									<h2 className='rooms__icon-title'>Сеть - Wi-Fii</h2>
-									<div className='rooms_i'>
-										<img
-											className='rooms__icon-img'
-											src='img/icons/rooms/3.svg'
-											alt='roomsIcons'
-										/>
-									</div>
+									<h2 className='rooms__icon-title hiddens'>Сеть - Wi-Fii</h2>
+									<img
+										className='rooms__icon-img'
+										src='img/icons/rooms/3.svg'
+										alt='roomsIcons'
+									/>
 								</div>
 							</div>
 							<h4 className='rooms__price'>От {item.price}</h4>
