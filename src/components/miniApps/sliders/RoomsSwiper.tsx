@@ -37,7 +37,6 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 				index
 			] as HTMLElement
 
-			// Hide the previous icon-title if it exists
 			if (selectedIconIndex !== null) {
 				const prevIconTitle = document.querySelectorAll('.rooms__icon-title')[
 					selectedIconIndex
@@ -50,7 +49,6 @@ export const RoomsSwiper: React.FC<RoomsSwiperProps> = ({
 		}
 
 		const handleMouseOut = () => {
-			// Hide the current icon-title when mouse out
 			if (selectedIconIndex !== null) {
 				const iconTitle = document.querySelectorAll('.rooms__icon-title')[
 					selectedIconIndex

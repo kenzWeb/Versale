@@ -206,16 +206,21 @@
 			&-img:hover .rooms__icon-title {
 				opacity: 1;
 			}
+
+			&-title {
+				position: absolute;
+				transform: translate(-30px, -100px);
+			}
 		}
 
 		&-pagination {
 			margin-left: 30px;
 		}
-	}
 
-	.rooms__gallery {
-		&-wrapper {
-			width: 80vw;
+		&__gallery {
+			&-wrapper {
+				width: 80vw;
+			}
 		}
 	}
 }
@@ -363,12 +368,26 @@
 			}
 		}
 
-
+		&__icon {
+			&-title {
+				transform: translate(-50px, -50px);
+			}
+		}
 	}
 
 	.contact {
 		&__left {
 			align-items: start;
+		}
+	}
+}
+
+@media (max-width: 350px) {
+	.rooms {
+		&__icon {
+			&-title {
+				transform: translate(-70px, -50px);
+			}
 		}
 	}
 }
