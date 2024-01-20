@@ -1,6 +1,5 @@
 .contact {
-	padding-top: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
-	padding-bottom: clamp(6.25rem, 4.496rem + 8.77vw, 12.5rem);
+	padding: clamp(3.125rem, 2.083rem + 5.21vw, 6.25rem) 0;
 	background-color: $primary;
 
 	&__container {
